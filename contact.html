@@ -1,6 +1,5 @@
 <!--Author: Cory Cizauskas-->
 
-
 <!doctype html>
 
 <head>
@@ -36,13 +35,13 @@
           <li>
             <a href="blog.html">Blog</a>
           </li>
-          <li class="active">
+          <li>
             <a href="aboutme.html">About Me</a>
           </li>
           <li>
             <a href="album.html">Album</a>
           </li>
-          <li>
+          <li class="active">
             <a href="contact.html">Contact</a>
           </li>
         </ul>
@@ -71,35 +70,39 @@
         </div>
       </div>
       <div class="col-sm-8 text-left">
-        <h1>My Life</h1>
-        <p>Born and raised in Pennsylvania, I've spent... It's been one week since you looked at me. Cocked your head to the side and said I'm angry. Five days since you laughed at me saying Get that together come back and see me. Three days since
-the living room, I realized it's all my fault, but couldn't tell you. Yesterday you'd forgiven me. But it'll still be two days till I say I'm sorry. Hold it now and watch the hoodwink. As I make you stop, think. You'll think you're
-looking at Aquaman. I summon fish to the dish, Although I like the Chalet Swiss. I like the sushi. Cause it's never touched a frying pan. Hot like wasabe when I bust rhymes. Big like Leann Rimes. Because I'm all about value. Bert Kaempfert's
-got the mad hits. You try to match wits. You try to hold me but I bust through</p>
+        <h1>Contact Me</h1>
+        <p>Feel free to send any comments or questions.</p>
         <hr>
-        <h2>Work Experience</h3>
-        <p>What are you looking at?<br>
-        <br>Unless you're an old fashioned lad that prefers look at websites on paper, your eyes are focused upon a glass sheet containing thousands of LED bulbs. Every millisecond these lights shift in intensity, as your visual cortex perceives solid multi-dimensional objects from the patterns they create.<br>
-        <br>I am a computer engineer, and my job is to keep those lights on.</p>
-
-        <h4>
-          <a id="rDownload" href="Fake_Resume.txt" download>Custom Resume: You will need a password to download</a>
-        </h4>
-      </div>
-      <div class="col-sm-2 sidenav">
-        <div class="well">
-          <img class="nyt"/>
+        <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+          <div class="row">
+            <label for="name">Your name:</label><br />
+            <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
+          </div>
+          <div class="row">
+            <label for="email">Your email:</label><br />
+            <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+          </div>
+          <div class="row">
+            <label for="message">Your message:</label><br />
+            <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+          </div>
+          <input id="submit_button" type="submit" value="Send email" />
+        </form>
+        </div>
+        <div class="col-sm-2 sidenav">
+          <div class="well">
+            <img class="nyt" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <footer class="container-fluid text-center">
-    <h3>“Every experience, good or bad, is a priceless collector's item.”</h3>
-  </footer>
+    <footer class="container-fluid text-center">
+      <h3>“Only on the Internet can a person be lonely and popular at the same time.”</h3>
+    </footer>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="js/resume.js"></script>
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+
 </html>
