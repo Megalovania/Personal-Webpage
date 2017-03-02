@@ -1,0 +1,142 @@
+/*Author: Cory Cizauskas*/
+
+body {
+  overflow: hidden;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.row.content {
+  height: 570px
+}
+
+.sidenav {
+  padding-top: 20px;
+  background-color: #B4CDCD;
+  height: 100%;
+}
+
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+  /*position:absolute;*/
+  bottom: 0;
+  width: 100%;
+  padding-top: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {
+    height: auto;
+  }
+}
+
+
+/* ----------- Non-Retina Screens ----------- */
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .row.content {
+    height: 550px;
+  }
+}
+
+.beach-b {
+  background: url(../images/beach.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 535px;
+  /*570px;*/
+  background-size: cover;
+  width: 100%;
+  margin: 0 auto;
+}
+
+footer>h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  font-style: italic;
+  font-variant: normal;
+  font-weight: 80;
+  line-height: 26.4px;
+}
+
+footer>h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-style: italic;
+  font-variant: normal;
+  font-weight: 80;
+  line-height: 10px;
+}
+
+.nyt {
+  content: url(../images/nyt.png);
+  margin: 0 auto;
+  padding: 0;
+  max-width: 100%;
+}
+
+.well {
+  padding: 7px;
+  margin: 0;
+}
+
+#coffee {
+  display: inline-block;
+  content: url("../images/blog.jpg");
+  height: 80px;
+  width: auto;
+  border-radius: 5px;
+  vertical-align: top;
+  float: left;
+}
+
+#coffeeChatter {
+  display: inline-block;
+  float: right;
+}
+
+.left-link {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 22.4px;
+}
+
+.left-link>a {
+  color: #003366;
+  /*#42db8;*/
+}
+
+div.img {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.img:hover {
+  border: 1px solid #777;
+}
+
+div.img img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
