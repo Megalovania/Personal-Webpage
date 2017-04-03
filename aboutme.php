@@ -31,19 +31,19 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li>
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
           </li>
           <li>
-            <a href="blog.html">Blog</a>
+            <a href="blog.php">Blog</a>
           </li>
           <li class="active">
-            <a href="aboutme.html">About Me</a>
+            <a href="aboutme.php">About Me</a>
           </li>
           <li>
-            <a href="album.html">Album</a>
+            <a href="album.php">Album</a>
           </li>
           <li>
-            <a href="contact.html">Contact</a>
+            <a href="contact.php">Contact</a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">

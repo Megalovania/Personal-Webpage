@@ -37,16 +37,16 @@ https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_temp_webpage&stacke
               <a href="#">Home</a>
             </li>
             <li>
-              <a href="blog.html">Blog</a>
+              <a href="blog.php">Blog</a>
             </li>
             <li>
-              <a href="aboutme.html">About Me</a>
+              <a href="aboutme.php">About Me</a>
             </li>
             <li>
-              <a href="album.html">Album</a>
+              <a href="album.php">Album</a>
             </li>
             <li>
-              <a href="contact.html">Contact</a>
+              <a href="contact.php">Contact</a>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
