@@ -125,15 +125,21 @@ div.img {
   border: 1px solid #ccc;
   float: left;
   width: 180px;
+  max-height: 186px;
 }
 
 div.img:hover {
   border: 1px solid #777;
 }
 
-div.img img {
+div.img a img {
   width: 100%;
   height: auto;
+  max-height: 133.5px;
+}
+
+div.img a {
+  display: block;
 }
 
 div.desc {
@@ -197,3 +203,12 @@ label.required:after{
 .row{
   margin:5px;
 }
+
+#album{
+  max-height: 550px;
+  overflow: auto;
+  
+}
+
+
+

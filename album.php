@@ -30,19 +30,19 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li>
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
+          </li>
+          <li>
+            <a href="blog.php">Blog</a>
+          </li>
+          <li>
+            <a href="aboutme.php">About Me</a>
           </li>
           <li class="active">
-            <a href="blog.html">Blog</a>
+            <a href="album.php">Album</a>
           </li>
           <li>
-            <a href="aboutme.html">About Me</a>
-          </li>
-          <li>
-            <a href="album.html">Album</a>
-          </li>
-          <li>
-            <a href="contact.html">Contact</a>
+            <a href="contact.php">Contact</a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -69,16 +69,57 @@
           </p>
         </div>
       </div>
-      <div class="col-sm-8 text-left">
-        <h1>Welcome</h1>
-        <p>This is a small blog I built to store events and memories over the days of my life. Having a public refuge for these stories allows me to access them wherever I go. But it also allows those who know me and myself to reflect on those good
-times. <br><br> I hope you enjoy its content.</p>
+      <div class="col-sm-8 text-left" id="album">
+        <h1>Photo Album</h1>
         <hr>
-          <img id="coffee" />
-          <div id="coffeeChatter">
-            <p>Where would we every be without coffee? And why is it that an entire pot can disapear in an hour without me getting a sip? I think we should start monitoring the amount of coffee consumed by eployees especially those who insist on
-leaving behind an empty pot!</p>
+        
+        
+        <?php 
+        $path    = './b-images';
+        $files = scandir($path);
+        
+        $count = 0;
+        
+        foreach($files as $filename):
+        $bfilename = explode(".", $filename);
+        
+        //echo($bfilename[1]);
+        
+        if(strtolower($bfilename[1]) == 'jpg'):
+        ?>
+        
+        <div class="img">
+          <a target="_blank" href="b-images/<?php echo($filename); ?>">         
+            <img src="b-images/<?php echo($filename); ?>" alt="<?php echo($bfilename[0]); ?>" width="300" height="200">           <!--make a div tag specify image name as background-image, background size | position-->
+          </a>
+          <div class="desc"><?php echo($bfilename[0]); ?></div>
+        </div>
+        
+        <?php endif; endforeach; ?>
+
+        <!--div class="img">
+          <a target="_blank" href="b-images/IMG_1330.jpg">
+            <img src="b-images/IMG_1330.jpg" alt="Forest" width="300" height="200"/>
+          </a>
+          <div class="desc">Somewhere in Sylvania</div>
+        </div>
+
+        <div class="img">
+          <a target="_blank" href="b-images/IMG_1602.jpg">
+            <img src="b-images/IMG_1602.jpg" alt="Rainy Day" width="300" height="200"/>
+            </a>
+            <div class="desc">Sunlit Road</div>
           </div>
+
+          <div class="img">
+            <a target="_blank" href="b-images/IMG_1786.jpg">
+              <img src="b-images/IMG_1786.jpg" alt="Coffee" width="300" height="200"/>
+            </a>
+            <div class="desc">Coffee Art</div>
+          </div-->
+          
+          
+          
         </div>
         <div class="col-sm-2 sidenav">
           <div class="well">
@@ -89,7 +130,7 @@ leaving behind an empty pot!</p>
     </div>
 
     <footer class="container-fluid text-center">
-      <h3>“Only on the Internet can a person be lonely and popular at the same time.”</h3>
+      <h3>“Communication works for those who work at it.”</h3>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

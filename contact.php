@@ -30,19 +30,19 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li>
-            <a href="index.html">Home</a>
+            <a href="index.php">Home</a>
           </li>
           <li>
-            <a href="blog.html">Blog</a>
+            <a href="blog.php">Blog</a>
           </li>
           <li>
-            <a href="aboutme.html">About Me</a>
+            <a href="aboutme.php">About Me</a>
+          </li>
+          <li>
+            <a href="album.php">Album</a>
           </li>
           <li class="active">
-            <a href="album.html">Album</a>
-          </li>
-          <li>
-            <a href="contact.html">Contact</a>
+            <a href="contact.php">Contact</a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -70,35 +70,24 @@
         </div>
       </div>
       <div class="col-sm-8 text-left">
-        <h1>Photo Album</h1>
+        <h1>Contact Me</h1>
+        <p>Feel free to send any comments or questions.</p>
         <hr>
-        <div class="img">
-          <a target="_blank" href="b-images/IMG_1056.jpg">
-            <img src="b-images/IMG_1056.jpg" alt="Penguin" width="300" height="200">
-          </a>
-          <div class="desc">Epic Penguin</div>
-        </div>
-
-        <div class="img">
-          <a target="_blank" href="b-images/IMG_1330.jpg">
-            <img src="b-images/IMG_1330.jpg" alt="Forest" width="300" height="200"/>
-          </a>
-          <div class="desc">Somewhere in Sylvania</div>
-        </div>
-
-        <div class="img">
-          <a target="_blank" href="b-images/IMG_1602.jpg">
-            <img src="b-images/IMG_1602.jpg" alt="Rainy Day" width="300" height="200"/>
-            </a>
-            <div class="desc">Sunlit Road</div>
+        <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+          <div class="row">
+            <label for="name">Your name:</label><br />
+            <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
           </div>
-
-          <div class="img">
-            <a target="_blank" href="b-images/IMG_1786.jpg">
-              <img src="b-images/IMG_1786.jpg" alt="Coffee" width="300" height="200"/>
-            </a>
-            <div class="desc">Coffee Art</div>
+          <div class="row">
+            <label for="email">Your email:</label><br />
+            <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
           </div>
+          <div class="row">
+            <label for="message">Your message:</label><br />
+            <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+          </div>
+          <input id="submit_button" type="submit" value="Send email" />
+        </form>
         </div>
         <div class="col-sm-2 sidenav">
           <div class="well">
@@ -109,7 +98,7 @@
     </div>
 
     <footer class="container-fluid text-center">
-      <h3>“Communication works for those who work at it.”</h3>
+      <h3>“Only on the Internet can a person be lonely and popular at the same time.”</h3>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
