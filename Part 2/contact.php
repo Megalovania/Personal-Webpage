@@ -1,4 +1,11 @@
-<!--Author: Cory Cizauskas-->
+<!--
+Author: Cory Cizauskas
+
+This page contains a reactive contact form
+
+Note: this form will not work on any other XAMPP servers but my own.
+
+-->
 
 <!doctype html>
 
@@ -32,7 +39,7 @@
           <li>
             <a href="index.php">Home</a>
           </li>
-          <li class="active">
+          <li>
             <a href="blog.php">Blog</a>
           </li>
           <li>
@@ -41,7 +48,7 @@
           <li>
             <a href="album.php">Album</a>
           </li>
-          <li>
+          <li class="active">
             <a href="contact.php">Contact</a>
           </li>
         </ul>
@@ -70,19 +77,39 @@
         </div>
       </div>
       <div class="col-sm-8 text-left">
-        <h1>Welcome</h1>
-        <p>This is a small blog I built to store events and memories over the days of my life. Having a public refuge for these stories allows me to access them wherever I go. But it also allows those who know me and myself to reflect on those good
-times. <br><br> I hope you enjoy its content.</p>
+        <h1>Contact Me</h1>
+        <p>Feel free to send any comments or questions.</p>
         <hr>
-          <img id="coffee" />
-          <div id="coffeeChatter">
-            <p>Where would we every be without coffee? And why is it that an entire pot can disapear in an hour without me getting a sip? I think we should start monitoring the amount of coffee consumed by eployees especially those who insist on
-leaving behind an empty pot!</p>
+
+        <form id="contact_form" action="php/processForm.php" method="POST">
+          <div class="row">
+            <label for="name">Your name:</label>
+            <input id="name" class="input" name="name" type="text" value="" size="30" /><br />
           </div>
+          <div class="row">
+            <label for="email">Your email:</label>
+            <input id="email" class="input" name="email" type="text" value="" size="30" /><br />
+          </div>
+          <div class="row">
+            <label for="message">Your message:</label>
+            <textarea id="message" class="input" name="message" rows="7" cols="30"></textarea><br />
+          </div>
+          <input id="submit_button" type="submit" value="Send email" />
+        </form>
+        <div id="response"></div>
         </div>
         <div class="col-sm-2 sidenav">
           <div class="well">
             <img class="nyt" />
+            <hr class="nyt-hr">
+            <?php for($x = 0; $x < 5; $x++): ?>
+              <div class="nyt-art">
+                <a target="_blank">
+                  <div class="title"></div>
+                </a>
+                <div class="abstract"></div>
+              </div>   
+            <?php endfor; ?>
           </div>
         </div>
       </div>
@@ -93,7 +120,12 @@ leaving behind an empty pot!</p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+    <script src="js/jquery.form.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/nyt.js"></script>
+    
   </body>
 
 </html>
